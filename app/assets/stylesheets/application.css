@@ -1,45 +1,72 @@
+/* Thay đổi font mặc định cho toàn bộ trang */
 body {
-   
-    background-image: url('panda.png');
-    background-size: cover; /* Ảnh sẽ bao phủ toàn bộ màn hình */
-    background-repeat: no-repeat; /* Không lặp lại ảnh */
-    background-position: center; /* Ảnh được căn giữa */
-    height: 100vh; /* Đặt chiều cao cho toàn bộ màn hình */
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  nav {
-    justify-content: flex-end;
-    display: flex;
-    font-size: 0.875em;
-    gap: 0.5rem;
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  nav a {
-    display: inline-block;
-  }
-  
-  main {
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-  
-  .notice {
-    color: green;
-  }
-  
-  section.product {
-    display: flex;
-    gap: 1rem;
-    flex-direction: row;
-  }
-  
-  section.product img {
-    border-radius: 8px;
-    flex-basis: 50%;
-    max-width: 50%;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  background-color: #f9f9f9; /* Thêm màu nền nhẹ cho toàn trang */
+  color: #333; /* Thêm màu chữ tối cho dễ đọc */
+}
+
+/* Cập nhật giao diện của thanh điều hướng */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1em; /* Tăng kích thước chữ của thanh điều hướng */
+  gap: 1rem; /* Tăng khoảng cách giữa các mục trong thanh điều hướng */
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #333; /* Thêm màu nền cho thanh điều hướng */
+  color: #fff; /* Màu chữ trắng cho thanh điều hướng */
+  border-radius: 8px; /* Thêm bo tròn cho thanh điều hướng */
+}
+
+/* Cập nhật giao diện của các liên kết trong nav */
+nav a {
+  text-decoration: none; /* Loại bỏ gạch chân */
+  color: white; /* Màu chữ trắng cho liên kết */
+  padding: 0.5rem 1rem; /* Thêm padding cho các liên kết */
+  border-radius: 4px; /* Thêm bo tròn cho các liên kết */
+  transition: background-color 0.3s; /* Thêm hiệu ứng chuyển màu nền */
+}
+
+nav a:hover {
+  background-color: #555; /* Thay đổi màu nền khi hover */
+}
+
+/* Cập nhật giao diện của phần nội dung chính */
+main {
+  max-width: 1024px;
+  margin: 2rem auto; /* Tăng khoảng cách trên và dưới */
+  background-color: white; /* Thêm màu nền trắng cho phần chính */
+  padding: 2rem; /* Thêm padding cho nội dung chính */
+  border-radius: 8px; /* Bo tròn góc cho phần chính */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho phần chính */
+}
+
+/* Giao diện cho thông báo */
+.notice {
+  color: green;
+  font-weight: bold; /* Làm đậm chữ thông báo */
+  font-size: 1.1em; /* Tăng kích thước chữ thông báo */
+  margin-bottom: 1rem; /* Thêm khoảng cách dưới thông báo */
+}
+
+/* Giao diện cho sản phẩm */
+section.product {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center; /* Canh giữa sản phẩm */
+  margin-top: 1rem; /* Thêm khoảng cách trên */
+}
+
+section.product img {
+  border-radius: 8px;
+  flex-basis: 50%;
+  max-width: 50%;
+  transition: transform 0.3s; /* Thêm hiệu ứng zoom vào ảnh */
+}
+
+section.product img:hover {
+  transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
